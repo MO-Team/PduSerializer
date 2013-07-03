@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl></projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Byte serialization framework for high-performance and thread-safe senerios</description>
+    <copyright>Copyright 2012</copyright>
+    <tags>Serialization,Serialize,Serializer,Byte,Bit</tags>
+  </metadata>
+</package>

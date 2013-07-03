@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99F8110A-4665-47C6-A109-78BBE22C0AE9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PduSerializer</RootNamespace>
+    <AssemblyName>PduSerializer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PduSerializer.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitwiseSerialization\BitArrayAttribute.cs" />
+    <Compile Include="BitwiseSerialization\BitArraySerializer.cs" />
+    <Compile Include="BitwiseSerialization\BitStream.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\NestedMemberGetter.cs" />
+    <Compile Include="Serializers\ListSerializer.cs" />
+    <Compile Include="ConfigurationStore.cs" />
+    <Compile Include="ConstantListAttribute.cs" />
+    <Compile Include="Serializers\ConstantListSerializer.cs" />
+    <Compile Include="CustomSerializerAttribute.cs" />
+    <Compile Include="EnumSerializeAttribute.cs" />
+    <Compile Include="Internal\FieldSerializationInfo.cs" />
+    <Compile Include="Internal\Reflection\ObjectFactory.cs" />
+    <Compile Include="Internal\Reflection\DelegateFactory\PropertyDelegateFactory.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\FieldAccessor.cs" />
+    <Compile Include="Internal\Reflection\DelegateFactory\FieldDelegateFactory.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\FieldGetter.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\IMemberAccessor.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\IMemberGetter.cs" />
+    <Compile Include="Internal\Reflection\DelegateFactory\MemberDelegateFactory.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\PropertyAccessor.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\PropertyGetter.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\ValueTypeFieldAccessor.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\ValueTypeProperyAccessor.cs" />
+    <Compile Include="ISerializationConfiguration.cs" />
+    <Compile Include="ISerializationEngine.cs" />
+    <Compile Include="ISerializationContext.cs" />
+    <Compile Include="ICustomSerializer.cs" />
+    <Compile Include="ITypeConfiguration.cs" />
+    <Compile Include="PrefixListAttribute.cs" />
+    <Compile Include="PrefixListSerializer.cs" />
+    <Compile Include="Properties\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PaddedStringAttribute.cs" />
+    <Compile Include="Serializers\PaddedStringSerializer.cs" />
+    <Compile Include="PduMessageAttribute.cs" />
+    <Compile Include="FieldAttribute.cs" />
+    <Compile Include="PduSerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Internal\Reflection\MemberAccessor\MemberInfoExtentions.cs" />
+    <Compile Include="Internal\TypeSerializationInfo.cs" />
+    <Compile Include="SerializationEngine.cs" />
+    <Compile Include="Internal\ByteOrderExtentions.cs" />
+    <Compile Include="Serializers\ByteSerializer.cs" />
+    <Compile Include="Serializers\BooleanSerializer.cs" />
+    <Compile Include="Serializers\FloatSerializer.cs" />
+    <Compile Include="Serializers\DoubleSerializer.cs" />
+    <Compile Include="Serializers\SByteSerializer.cs" />
+    <Compile Include="Serializers\StringSerializer.cs" />
+    <Compile Include="Serializers\UInt32Serializer.cs" />
+    <Compile Include="Serializers\UInt64Serializer.cs" />
+    <Compile Include="Serializers\UInt16Serializer.cs" />
+    <Compile Include="Serializers\Int16Serializer.cs" />
+    <Compile Include="Serializers\Int32Serializer.cs" />
+    <Compile Include="Serializers\Int64Serializer.cs" />
+    <Compile Include="Serializers\VariableListSerializer.cs" />
+    <Compile Include="VariableListAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BitwiseSerialization\BitStream.resx">
+      <DependentUpon>BitStream.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PduSerializer.nuspec" />
+    <None Include="PduSerializer.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)..\..\Genesis\Tools\nuget\nuget install $(ProjectDir)packages.config -Source http://app0324ofek-tfs:8082/dataservices/packages.svc -o $(SolutionDir)Packages
+if errorlevel 1 echo Nuget: warning NU0001: Was unable to connect to NuGet Server
+exit /b</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
