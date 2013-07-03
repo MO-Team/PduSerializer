@@ -127,9 +127,8 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>$(SolutionDir)..\..\Genesis\Tools\nuget\nuget install $(ProjectDir)packages.config -Source http://app0324ofek-tfs:8082/dataservices/packages.svc -o $(SolutionDir)Packages
-if errorlevel 1 echo Nuget: warning NU0001: Was unable to connect to NuGet Server
-exit /b</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

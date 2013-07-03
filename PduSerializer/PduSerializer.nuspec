@@ -10,7 +10,7 @@
     <iconUrl></iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Byte serialization framework for high-performance and thread-safe senerios</description>
-    <copyright>Copyright 2012</copyright>
+    <copyright>Copyright MO 2012</copyright>
     <tags>Serialization,Serialize,Serializer,Byte,Bit</tags>
   </metadata>
 </package>

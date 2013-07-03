@@ -43,17 +43,9 @@
     <AssemblyOriginatorKeyFile>PduSerializer.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.mocks">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
-    </Reference>
-    <Reference Include="pnunit.framework">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Mocks">
-      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,15 +78,14 @@
       <Name>PduSerializer.TestData</Name>
     </ProjectReference>
     <ProjectReference Include="..\PduSerializer\PduSerializer.csproj">
-      <Project>{99F8110A-4665-47C6-A109-78BBE22C0AE9}</Project>
-      <Name>Iaf.Genesis.PduSerializer</Name>
+      <Project>{99f8110a-4665-47c6-a109-78bbe22c0ae9}</Project>
+      <Name>PduSerializer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>$(SolutionDir)..\..\Genesis\Tools\nuget\nuget install $(ProjectDir)packages.config -Source http://app0324ofek-tfs:8082/dataservices/packages.svc -o $(SolutionDir)Packages
-if errorlevel 1 echo Nuget: warning NU0001: Was unable to connect to NuGet Server
-exit /b</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
