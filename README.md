@@ -12,4 +12,4 @@ This software is distributed under the terms of the Free Software Foundation [Le
 
 [D1]: http://www.gnu.org/licenses/lgpl-2.1-standalone.html
 [D2]: http://deluxcoding.blogspot.com
-[D3]: http://deluxcoding.blogspot.com/2014/01/introduction-for-pduserializer.html
+[D3]: http://deluxcoding.blogspot.com/2014/01/introduction-to-pduserializer.html
